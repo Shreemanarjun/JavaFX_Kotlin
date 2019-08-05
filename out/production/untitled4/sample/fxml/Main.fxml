@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <tabs>
+      <Tab text="Login">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #02aab0, #00cdac);">
+               <children>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="44.0" text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtUserName" alignment="TOP_LEFT" focusColor="#6a44c3" labelFloat="true" layoutX="170.0" layoutY="40.0" prefHeight="25.0" prefWidth="261.0" promptText="Enter Username" unFocusColor="WHITE" />
+                  <Label alignment="CENTER" layoutX="96.0" layoutY="87.0" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="txtPassword" alignment="TOP_LEFT" focusColor="#5f5bc7" labelFloat="true" layoutX="169.0" layoutY="81.0" prefHeight="25.0" prefWidth="267.0" promptText="Enter Password" unFocusColor="WHITE" />
+                  <JFXButton fx:id="loginbtn" buttonType="RAISED" layoutX="233.0" layoutY="137.0" onAction="#login" prefHeight="26.0" prefWidth="70.0" ripplerFill="#02ff1c" style="-fx-background-color: green;" text="Login" textFill="WHITE" />
+                  <Label fx:id="lblStatus" layoutX="239.0" layoutY="222.0" prefHeight="17.0" prefWidth="125.0" />
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" layoutX="457.0" layoutY="288.0" onAction="#close" prefHeight="45.0" prefWidth="117.0" ripplerFill="#cd1a1a" text="EXIT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/shut.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="lblStatus" layoutX="233.0" layoutY="193.0" prefHeight="29.0" prefWidth="209.0" />
+                  <JFXTextArea fx:id="logintextarea" layoutX="140.0" layoutY="188.0" prefHeight="66.0" prefWidth="288.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Settings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #02aab0, #00cdac);">
+               <children>
+                  <Label layoutX="236.0" layoutY="14.0" text="MySQL Profile" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="90.0" prefHeight="19.0" prefWidth="55.0" text="DB URL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="DBurl" focusColor="#0040ff" layoutX="108.0" layoutY="87.0" prefHeight="25.0" prefWidth="308.0" promptText="Enter DB URL" unFocusColor="WHITE" />
+                  <Label layoutX="23.0" layoutY="138.0" prefHeight="19.0" prefWidth="71.0" text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="182.0" prefHeight="19.0" prefWidth="71.0" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="DBuser" focusColor="#0040ff" layoutX="107.0" layoutY="128.0" prefHeight="25.0" prefWidth="308.0" promptText="Enter Username" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="DBpass" focusColor="#0040ff" layoutX="106.0" layoutY="174.0" prefHeight="25.0" prefWidth="308.0" promptText="Enter Password" unFocusColor="WHITE" />
+                  <JFXButton buttonType="RAISED" layoutX="132.0" layoutY="245.0" onAction="#check" prefHeight="26.0" prefWidth="70.0" ripplerFill="#02ff1c" style="-fx-background-color: green;" text="Check" textFill="WHITE" />
+                  <JFXButton fx:id="savebtn" buttonType="RAISED" layoutX="294.0" layoutY="244.0" prefHeight="26.0" prefWidth="70.0" ripplerFill="#02ff1c" style="-fx-background-color: green;" text="Save" textFill="WHITE" />
+                  <JFXButton fx:id="ExitButton1" buttonType="RAISED" layoutX="506.0" layoutY="325.0" onAction="#close" prefHeight="28.0" prefWidth="94.0" ripplerFill="#cd1a1a" text="EXIT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="DBlist" layoutX="111.0" layoutY="35.0" onAction="#onselect" prefHeight="25.0" prefWidth="152.0" unFocusColor="WHITE" />
+                  <Label layoutX="7.0" layoutY="43.0" prefHeight="19.0" prefWidth="113.0" text="Select Your DB" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ProgressIndicator fx:id="pindicator" layoutX="249.0" layoutY="305.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

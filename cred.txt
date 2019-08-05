@@ -1,0 +1,3 @@
+myurl
+user
+pass

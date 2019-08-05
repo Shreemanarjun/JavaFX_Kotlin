@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1378.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AdminController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="25.0" prefHeight="715.0" prefWidth="174.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutY="1.0" prefHeight="63.0" prefWidth="171.0" style="-fx-background-color: #bbcfed;">
+               <children>
+                  <Label layoutX="53.0" layoutY="21.0" prefHeight="18.0" prefWidth="61.0" text="Admin" textFill="#0d3478">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="4.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../Icons/icons8_user_64px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Separator layoutY="57.0" prefHeight="12.0" prefWidth="170.0" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-2.0" layoutY="61.0" onAction="#loaddash" prefHeight="62.0" prefWidth="173.0" ripplerFill="#29acba" style="-fx-background-color: white;" text="     Dashboard" textAlignment="CENTER" textFill="#0d3478">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-2.0" layoutY="116.0" prefHeight="62.0" prefWidth="173.0" ripplerFill="#29acba" style="-fx-background-color: white;" text="Invoice " textAlignment="CENTER" textFill="#0d3478">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="9.0" layoutY="72.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_combo_chart_64px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="8.0" layoutY="130.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_invoice_64px_1.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-2.0" layoutY="170.0" prefHeight="62.0" prefWidth="173.0" ripplerFill="#29acba" style="-fx-background-color: white;" text="   Report    " textAlignment="CENTER" textFill="#0d3478">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="7.0" layoutY="183.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_report_card_64px_1.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-2.0" layoutY="223.0" onAction="#loadpartypanel" prefHeight="62.0" prefWidth="173.0" ripplerFill="#29acba" style="-fx-background-color: white;" text="      Parties     " textAlignment="CENTER" textFill="#0d3478">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="11.0" layoutY="235.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_user_groups_64px_2.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-2.0" layoutY="276.0" prefHeight="62.0" prefWidth="173.0" ripplerFill="#29acba" style="-fx-background-color: white;" text="    Items      " textAlignment="CENTER" textFill="#0d3478">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="9.0" layoutY="291.0" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_list_64px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator layoutX="169.0" orientation="VERTICAL" prefHeight="733.0" prefWidth="7.0" />
+      <Pane fx:id="custompane" layoutX="171.0" layoutY="27.0" prefHeight="716.0" prefWidth="992.0" />
+      <MenuBar layoutX="-4.0" layoutY="-2.0" prefHeight="28.0" prefWidth="1388.0" style="-fx-background-color: #4CAF50;">
+        <menus>
+          <Menu fx:id="FileMenu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="CloseWindow" mnemonicParsing="false" onAction="#closeadmin" text="Close " />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#logout" text="Logout " />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="About" mnemonicParsing="false" text="About " />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
