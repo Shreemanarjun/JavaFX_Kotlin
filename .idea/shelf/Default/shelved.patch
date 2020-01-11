@@ -1,0 +1,22 @@
+Index: src/sample/controller/PartyController.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/sample/controller/PartyController.kt	(date 1565026640000)
++++ src/sample/controller/PartyController.kt	(date 1565091297053)
+@@ -53,12 +53,9 @@
+ 
+         }
+         }
+-    }
+-
+     fun remove(){
+-        //resultext1.text="${partybox.value} is removed"
+-       // resultext1.style="-fx-background-color:white; -fx-text-fill:GREEN;"
+-    }
+ 
+ 
++    }
++    }
+ 
